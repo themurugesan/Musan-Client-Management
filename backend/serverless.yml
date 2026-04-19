@@ -1,0 +1,21 @@
+service: crm-musan
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  timeout: 29
+  region: ap-south-1 
+  memorySize: 512
+  environment:
+
+    MONGO_URI: ${env:MONGO_URI}
+    JWT_SECRET: ${env:JWT_SECRET}
+
+functions:
+  api:
+    handler: server.handler
+    events:
+      - httpApi: '*'
+
+plugins:
+  - serverless-offline      

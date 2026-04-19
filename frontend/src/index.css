@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --color-musan-primary: #5D3FD3;
+    --color-musan-dark: #311465;
+    --color-musan-light: #F8F7FF;
+    --color-musan-accent: #8A2BE2;
+}
